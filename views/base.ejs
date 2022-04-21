@@ -1,5 +1,21 @@
 <%-include('header')%>
 
-<h1><%=day %> !</h1>
+<div class="box" id="heading">
+  <h1 style="color: brown"><%= day %></h1>
+</div>
+
+
+
+<form class="" action="/" method="post">
+  <label for="newItem">Enter Your List : </label>
+  <input type="text" name="newItem" />
+  <button type="submit">Click to Add</button>
+</form>
+
+<ul>
+  <% for(i=0;i<items.length;i++){ %>
+  <li><%= items[i] %></li>
+  <%}%>
+</ul>
 
 <%-include('footer')%>
